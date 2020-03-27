@@ -1,0 +1,1 @@
+include ':app_livedata_mutable', ':app_livedata_mediator', ':app_livedata_viewmodel', ':app_livedata_room'

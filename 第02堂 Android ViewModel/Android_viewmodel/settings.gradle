@@ -1,0 +1,1 @@
+include ':app_saveinstancestate', ':app_viewmodel'

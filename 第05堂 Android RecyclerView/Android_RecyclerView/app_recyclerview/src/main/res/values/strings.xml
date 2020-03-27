@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">App_RecyclerView</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="foodNames">
+        <item>bread</item>
+        <item>ham</item>
+        <item>lettuce</item>
+        <item>olives</item>
+        <item>onion</item>
+        <item>tomato</item>
+    </string-array>
+</resources>

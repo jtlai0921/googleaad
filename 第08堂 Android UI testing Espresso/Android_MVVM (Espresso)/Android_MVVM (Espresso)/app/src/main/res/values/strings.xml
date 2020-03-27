@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android_MVVM</string>
+    <string name="delete_all_notes">Delete all</string>
+    <string name="auto_add_note">Auto add</string>
+</resources>

@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.google.developers.mojimaster2"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    def lifecycle_version = "1.1.1"
+    def room_version = "1.1.0"
+    def paging_version = "1.0.0"
+    def support_version = "27.1.1"
+    def constraint_version = "1.1.2"
+    def junit_version = "4.12"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "com.android.support:cardview-v7:$support_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation "com.android.support:support-emoji:$support_version"
+    implementation "com.android.support:support-emoji-appcompat:$support_version"
+    implementation "com.android.support:support-emoji-bundled:$support_version"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    implementation "android.arch.persistence.room:common:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+
+    implementation "android.arch.paging:runtime:$paging_version"
+
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "android.arch.core:core-testing:$lifecycle_version"
+    testImplementation "android.arch.persistence.room:testing:$room_version"
+    testImplementation "android.arch.paging:common:$paging_version"
+
+    // for test
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+
+}

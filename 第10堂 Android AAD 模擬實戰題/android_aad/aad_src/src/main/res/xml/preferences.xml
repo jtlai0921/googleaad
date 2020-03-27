@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:id="@+id/notification"
+        android:key="@string/pref_key_notification"
+        android:title="@string/pref_notification_title"
+        android:summary="@string/pref_notification_summary"
+        android:defaultValue="false"/>
+
+    <ListPreference
+        android:id="@+id/n_answers"
+        android:key="@string/pref_key_answers"
+        android:title="@string/pref_answers_title"
+        android:summary="@string/pref_answers_summary"
+        android:entries="@array/number_smileys_answers"
+        android:entryValues="@array/number_smileys_answers_value"
+        android:defaultValue="4"/>
+
+</PreferenceScreen>
